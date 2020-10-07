@@ -1,0 +1,12 @@
+server:
+  tomcat:
+    accept-count: 1000
+    max-connections: 10000
+    uri-encoding: UTF-8
+    threads:
+      max: 800
+      min-spare: 100
+    connection-timeout: 5000ms
+  port: 8080
+logging:
+  config: classpath:log4j2.xml
