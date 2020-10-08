@@ -6,6 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ellectronic-common" />
+        <module name="electronic-sampler-server" />
+        <module name="electronic-sampler-client" />
         <module name="electronic-console" />
       </profile>
     </annotationProcessing>
@@ -13,6 +16,9 @@
       <module name="electronic-console" target="1.8" />
       <module name="electronic-dependency-manager" target="1.8" />
       <module name="electronic-parent" target="1.8" />
+      <module name="electronic-sampler-client" target="1.8" />
+      <module name="electronic-sampler-server" target="1.8" />
+      <module name="ellectronic-common" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -5,7 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/electronic-parent/electronic-console/electronic-console.iml" filepath="$PROJECT_DIR$/electronic-parent/electronic-console/electronic-console.iml" group="electronic-parent and modules" />
       <module fileurl="file://$PROJECT_DIR$/electronic-dependency-manager/electronic-dependency-manager.iml" filepath="$PROJECT_DIR$/electronic-dependency-manager/electronic-dependency-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/electronic-parent/electronic-parent.iml" filepath="$PROJECT_DIR$/electronic-parent/electronic-parent.iml" group="electronic-parent and modules" />
-      <module fileurl="file://$PROJECT_DIR$/electronic-parent/ellectronic-common/ellectronic-common.iml" filepath="$PROJECT_DIR$/electronic-parent/ellectronic-common/ellectronic-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/electronic-parent/electronic-sampler-client/electronic-sampler-client.iml" filepath="$PROJECT_DIR$/electronic-parent/electronic-sampler-client/electronic-sampler-client.iml" group="electronic-parent and modules" />
+      <module fileurl="file://$PROJECT_DIR$/electronic-parent/electronic-sampler-server/electronic-sampler-server.iml" filepath="$PROJECT_DIR$/electronic-parent/electronic-sampler-server/electronic-sampler-server.iml" group="electronic-parent and modules" />
+      <module fileurl="file://$PROJECT_DIR$/electronic-parent/ellectronic-common/ellectronic-common.iml" filepath="$PROJECT_DIR$/electronic-parent/ellectronic-common/ellectronic-common.iml" group="electronic-parent and modules" />
       <module fileurl="file://$PROJECT_DIR$/.idea/intelligence-electronic.iml" filepath="$PROJECT_DIR$/.idea/intelligence-electronic.iml" />
     </modules>
   </component>

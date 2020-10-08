@@ -1,4 +1,4 @@
-package com.sydl.client;
+package com.sydl.electronic;
 
 public class ClientApplication {
 }

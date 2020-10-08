@@ -5,11 +5,19 @@
     <parent>
         <artifactId>electronic-parent</artifactId>
         <groupId>org.sydl</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>electronic-sampler-server</artifactId>
 
 
+    <dependencies>
+
+        <!-- netty -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+
+    </dependencies>
 </project>

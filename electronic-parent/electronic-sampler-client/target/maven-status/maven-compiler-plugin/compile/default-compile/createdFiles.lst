@@ -1,0 +1,6 @@
+com\sydl\electronic\endecoder\ElectricSensorClientEncoder.class
+com\sydl\electronic\handler\ClientMessageHandler2.class
+com\sydl\electronic\client\NettyClient$1.class
+com\sydl\electronic\client\NettyClient.class
+com\sydl\electronic\ClientApplication.class
+com\sydl\electronic\constants\ConstantValue.class
