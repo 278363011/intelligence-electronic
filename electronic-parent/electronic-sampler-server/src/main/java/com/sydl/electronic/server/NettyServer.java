@@ -1,9 +1,7 @@
-package com.sydl.electricpower.server;
+package com.sydl.electronic.server;
 
-import com.sydl.electricpower.endecode.CustomMessageDecoder;
-import com.sydl.electricpower.endecode.CustomMessageDecoder2;
-import com.sydl.electricpower.handler.ServerMessageHandler;
-import com.sydl.electricpower.handler.ServerMessageHandler2;
+import com.sydl.electronic.endecoder.ElectricSensorServerDecoder;
+import com.sydl.electronic.handler.ServerMessageHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.ChannelFuture;
@@ -38,7 +36,7 @@ public class NettyServer {
         this(false,8899);
     }
 
-    public NettyServer(boolean useEPool,int port) {
+    public NettyServer(boolean useEPool, int port) {
         //初始化
         bossEventLoopGroup = new NioEventLoopGroup();
         workEventLoopGroup = new NioEventLoopGroup();
@@ -48,7 +46,7 @@ public class NettyServer {
     }
 
 
-    private void start() {
+    public void start() {
             //核心配置
             serverBootstrap
                     .group(bossEventLoopGroup, workEventLoopGroup)
@@ -66,8 +64,8 @@ public class NettyServer {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             // 协议编解码
-                            socketChannel.pipeline().addLast(new CustomMessageDecoder2());
-                            socketChannel.pipeline().addLast(new ServerMessageHandler2());
+                            socketChannel.pipeline().addLast(new ElectricSensorServerDecoder());
+                            socketChannel.pipeline().addLast(new ServerMessageHandler());
                         }
                     });
             //正式连接
@@ -91,9 +89,6 @@ public class NettyServer {
     }
 
 
-    public static void main(String[] args) {
-        NettyServer nettyServer=new NettyServer();
-        nettyServer.start();
-    }
+
 
 }

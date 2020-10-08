@@ -1,4 +1,4 @@
-package com.sydl.electronic.utils;
+package com.sydl.electronic.constants;
 
 public interface ConstantValue {
 
@@ -11,6 +11,7 @@ public interface ConstantValue {
      * 模块号
      */
     public static final short MODEL = 100;
+
     /**
      * 命令号
      */

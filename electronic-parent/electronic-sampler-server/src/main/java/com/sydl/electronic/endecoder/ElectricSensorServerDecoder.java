@@ -7,7 +7,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 
 import java.util.List;
 
-public class ElectricSensorDecoder extends ByteToMessageDecoder {
+public class ElectricSensorServerDecoder extends ByteToMessageDecoder {
 
     int a=0;
 
