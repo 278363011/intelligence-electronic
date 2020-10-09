@@ -19,7 +19,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
     druid:
-      url: jdbc:mysql://172.21.91.114:3306/middleplatform?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://172.21.91.114:3306/electronic?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
       username: root
       password: 87654321
       initial-size: 10
@@ -55,6 +55,7 @@ mybatis-plus:
     id-type: 0
     field-strategy: 1
   configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
     cache-enabled: false
     jdbc-type-for-null: 'null'

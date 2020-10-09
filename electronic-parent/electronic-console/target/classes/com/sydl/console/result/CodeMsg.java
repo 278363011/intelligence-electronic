@@ -4,9 +4,8 @@ public class CodeMsg {
 
     private int code;
     private String msg;
-    public static CodeMsg SUCCESS = new CodeMsg(0, "success");
-    public static CodeMsg SERVER_ERROR = new CodeMsg(50010, "服务端异常!");
-    public static CodeMsg USER_ID_EMPRT = new CodeMsg(1, "用户ID不能为空");
+    public static CodeMsg SUCCESS = new CodeMsg(0, "调用成功!");
+    public static CodeMsg ERROR = new CodeMsg(500, "服务异常!");
 
     public static CodeMsg create(int code, String msg) {
         CodeMsg aCodeMsg = new CodeMsg(code, msg);
