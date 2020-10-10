@@ -3,6 +3,7 @@ package com.sydl.console.security.handler;
 import com.alibaba.fastjson.JSON;
 import com.sydl.console.result.CodeMsg;
 import com.sydl.console.result.Result;
+import com.sydl.console.utils.ResponseUtils;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
@@ -17,9 +18,8 @@ public class UserAccessDeniedHandler implements AccessDeniedHandler {
 
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {
-        httpServletResponse.setCharacterEncoding("UTF-8");
-        httpServletResponse.setHeader("Content-type", "text/html;charset=UTF-8");
-        Result<Object> error = Result.error(CodeMsg.create(300, "权限不足!"));
-        httpServletResponse.getWriter().write(JSON.toJSONString(error));
+
+        ResponseUtils.renderToken(httpServletResponse,Result.error(CodeMsg.create(300, "权限不足!")));
+
     }
 }

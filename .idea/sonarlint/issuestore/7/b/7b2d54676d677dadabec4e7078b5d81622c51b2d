@@ -1,0 +1,15 @@
+
+P
+java:S11412"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+r
+java:S1488Š"[Immediately return this expression instead of assigning it to the temporary variable "isa".(‹ŒÔë
+P
+java:S1118":Add a private constructor to hide the implicit public one.(âà‚ß
+m
+java:S3776+"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ƒàŠüşÿÿÿÿ
+h
+java:S3776N"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(½Áé
+n
+java:S2293R"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷…_
+o
+java:S2293S"YReplace the type specification in this constructor call with the diamond operator ("<>").(³»èÑ

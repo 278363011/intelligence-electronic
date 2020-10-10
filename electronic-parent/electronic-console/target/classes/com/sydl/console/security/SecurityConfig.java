@@ -1,9 +1,12 @@
 package com.sydl.console.security;
 
 import com.sydl.console.security.JwtUserDetailsService;
+import com.sydl.console.security.filter.JwtAuthenticationTokenFilter;
 import com.sydl.console.security.handler.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,6 +20,13 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import javax.annotation.security.RolesAllowed;
+
+
+//@EnableGlobalMethodSecurity 开启注解的权限控制，默认是关闭的。
+//prePostEnabled：使用表达式实现方法级别的控制，如：@PreAuthorize("hasRole('ADMIN')")
+//securedEnabled: 开启 @Secured 注解过滤权限，如：@Secured("ROLE_ADMIN")
+//jsr250Enabled: 开启 @RolesAllowed 注解过滤权限，如：@RolesAllowed("ROLE_ADMIN")
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -47,7 +57,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     UserAccessDeniedHandler userAccessDeniedHandler;
 
     //拦截token JWT 拦截器
-
+    @Autowired
+    JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
     //自定义登录
 
     @Bean
@@ -74,8 +85,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             http
                 .cors() //跨域支持
                 .and().csrf().disable() //关闭csrf验证
-//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)// 用了jwt token 不需要session
-//                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)// 用了jwt token 不需要session
+                .and()
 
                 .httpBasic().authenticationEntryPoint(userAuthenticationEntryPointHandler) //未登陆时返回 JSON 格式的数据给前端（否则为 html）
 
@@ -114,14 +125,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .userDetailsService(jwtUserDetailsService).tokenValiditySeconds(300);
 
             http.exceptionHandling().accessDeniedHandler(userAccessDeniedHandler); // 无权访问 JSON 格式的数据
-            //http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class); // JWT Filter
+            http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class); // JWT Filter
 
     }
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
+        CorsConfiguration cors = new CorsConfiguration();
+        cors.setAllowCredentials(true);
+        cors.addAllowedOrigin("*");
+        cors.addAllowedHeader("*");
+        cors.addAllowedMethod("*");
+        source.registerCorsConfiguration("/**", cors); //new CorsConfiguration().applyPermitDefaultValues()
         return source;
     }
 }

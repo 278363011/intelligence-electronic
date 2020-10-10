@@ -1,0 +1,11 @@
+
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ü‹‚æĞ.
+s
+java:S1128	"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥8€¬ƒåĞ.
+N
+java:S1602+",Remove useless curly braces around statement( °ıùÿÿÿÿ8áÁ€æĞ.
+\
+java:S1128"?Remove this unused import 'com.sydl.console.model.SysResource'.(æ—Ñ³8ü‹‚æĞ.
+L
+java:S3740'"/Provide the parametrized type for this generic.(¿¨à³8úŠ•åĞ.

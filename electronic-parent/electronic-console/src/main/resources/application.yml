@@ -60,3 +60,10 @@ mybatis-plus:
     cache-enabled: false
     jdbc-type-for-null: 'null'
     call-setters-on-nulls: true
+
+jwt:
+  secret: csdlelectronic
+  iss: 123456789
+  header: Authorization
+  expiration: 36000000
+  expiration_remember: 604800

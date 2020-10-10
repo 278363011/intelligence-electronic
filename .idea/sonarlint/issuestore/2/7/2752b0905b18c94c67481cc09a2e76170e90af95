@@ -1,0 +1,22 @@
+
+U	java:S106a"9Replace this use of System.out or System.err by a logger.(íï“ª8×ÿ¯Ğ.
+E
+java:S1481B"(Remove this unused "cmd" local variable.(ÃÕËù8×ÿ¯Ğ.
+x
+java:S1104"VMake BASE_LENTH a static final constant or non-public and provide accessors if needed.(«¶˜±ıÿÿÿÿ8×ÿ¯Ğ.
+8
+java:S3626c"Remove this redundant jump.(ûÁİ…8×ÿ¯Ğ.
+R
+java:S1444"0Make this "public static BASE_LENTH" field final(«¶˜±ıÿÿÿÿ8×ÿ¯Ğ.
+w
+java:S3008"URename this field "BASE_LENTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¶˜±ıÿÿÿÿ8×ÿ¯Ğ.
+Z	java:S106]"9Replace this use of System.out or System.err by a logger.(ôê¥‡üÿÿÿÿ8×ÿ¯Ğ.
+M
+java:S1481@"+Remove this unused "module" local variable.(ôáæ²ûÿÿÿÿ8×ÿ¯Ğ.
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(¿èá»úÿÿÿÿ8×ÿ¯Ğ.
+]	java:S125&"<This block of commented-out lines of code should be removed.(»¸‘¢üÿÿÿÿ8×ÿ¯Ğ.
+\
+java:S1854@":Remove this useless assignment to local variable "module".(ôáæ²ûÿÿÿÿ8×ÿ¯Ğ.
+U	java:S106J"9Replace this use of System.out or System.err by a logger.(¨Ø¥¾8×ÿ¯Ğ.
+T
+java:S1854B"7Remove this useless assignment to local variable "cmd".(ÃÕËù8×ÿ¯Ğ.

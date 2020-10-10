@@ -1,0 +1,7 @@
+
+[
+java:S4719"9Replace charset name argument with StandardCharsets.UTF_8(²áÖçÿÿÿÿÿ8¢·š‚Ñ.
+W
+java:S1118":Add a private constructor to hide the implicit public one.(‹åÑÉ8àÙš‚Ñ.
+h
+java:S3252"FUse static access with "com.alibaba.fastjson.JSON" for "toJSONString".(²áÖçÿÿÿÿÿ8¡Š‹‰Ñ.
